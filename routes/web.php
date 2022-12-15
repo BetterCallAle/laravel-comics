@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 $navbarLinks = [
     [
-        "name"=> "Caracters",
-        "link"=> "caracters"
+        "name"=> "Characters",
+        "link"=> "characters"
     ],
     [
         "name"=> "Comics",
-        "link"=> "home"
+        "link"=> "comics"
     ],
     [
         "name"=> "Movies",
@@ -96,3 +96,67 @@ Route::get("/comics", function() use($navbarLinks){
 
     return view('comics', compact("navbar", "comics"));
 })->name("comics");
+
+
+Route::get("/characters", function() use($navbarLinks){
+
+    $navbar = $navbarLinks;
+
+    return view('characters', compact("navbar"));
+})->name("characters");
+
+Route::get("/movies", function() use($navbarLinks){
+
+    $navbar = $navbarLinks;
+
+    return view('movies', compact("navbar"));
+})->name("movies");
+
+Route::get("/tv", function() use($navbarLinks){
+
+    $navbar = $navbarLinks;
+
+    return view('tv', compact("navbar"));
+})->name("tv");
+
+Route::get("/games", function() use($navbarLinks){
+
+    $navbar = $navbarLinks;
+
+    return view('games', compact("navbar"));
+})->name("games");
+
+Route::get("/collectibles", function() use($navbarLinks){
+
+    $navbar = $navbarLinks;
+
+    return view('collectibles', compact("navbar"));
+})->name("collectibles");
+
+Route::get("/videos", function() use($navbarLinks){
+
+    $navbar = $navbarLinks;
+
+    return view('videos', compact("navbar"));
+})->name("videos");
+
+Route::get("/fans", function() use($navbarLinks){
+
+    $navbar = $navbarLinks;
+
+    return view('fans', compact("navbar"));
+})->name("fans");
+
+Route::get("/news", function() use($navbarLinks){
+
+    $navbar = $navbarLinks;
+
+    return view('news', compact("navbar"));
+})->name("news");
+
+Route::get("/shop", function() use($navbarLinks){
+
+    $navbar = $navbarLinks;
+
+    return view('shop', compact("navbar"));
+})->name("shop");

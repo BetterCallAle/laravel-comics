@@ -1,14 +1,16 @@
 <header>
     <div class="container d-flex align-items-center justify-content-between">
         <div class="logo">
-            <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo DC">
+            <a href="{{route("home")}}">
+                <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo DC">
+            </a>
         </div>
         <nav class="header-nav d-flex">
             <ul class="d-flex">
                 @foreach ($navbar as $link)
                     @if ($loop->last)
                         <li class="me-2 menu-link dropdown">
-                            <a href="#" class="">
+                            <a href="{{ route($link["link"]) }}" class="">
                                 {{ $link["name"]}} &triangledown;
                                 {{-- Dropdown menu --}}
                                 <ul class="d-none hidden-menu">
@@ -24,7 +26,7 @@
                         </li>
                     @else
                         <li class="me-4 menu-link">
-                            <a href="">{{ $link["name"] }}</a>
+                            <a href="{{ route($link["link"]) }}">{{ $link["name"] }}</a>
                         </li>
                     @endif
                 @endforeach
