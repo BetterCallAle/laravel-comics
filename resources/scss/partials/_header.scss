@@ -6,8 +6,10 @@ header{
     .header-nav{
         font-weight: 700;
         text-transform: uppercase;
+        justify-self: center;
         
         ul{
+            flex-grow: 1;
             .dropdown{
                 position: relative;
                 
@@ -25,24 +27,24 @@ header{
             }
         }
 
-        form{
-            width: 10%;
-            .search-bar{
-                width: 100%;
-                border-top: none;
-                border-left: none;
-                border-right: none;
-                border-bottom: 2px solid $main-blue;
-                
-                &::placeholder{
-                    font-weight: 500;
-                    color: black;
-                    text-align: right;
-                }
+    }
+    form{
+        width: 10%;
+        .search-bar{
+            width: 100%;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid $main-blue;
+            
+            &::placeholder{
+                font-weight: 500;
+                color: black;
+                text-align: right;
+            }
 
-                &:focus{
-                    outline: none;
-                }
+            &:focus{
+                outline: none;
             }
         }
     }

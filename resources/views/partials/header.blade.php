@@ -1,5 +1,5 @@
 <header>
-    <div class="container d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
         <div class="logo">
             <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo DC">
         </div>
@@ -7,7 +7,7 @@
             <ul class="d-flex">
                 @foreach ($navbar as $link)
                     @if ($loop->last)
-                        <li class="ms-4 me-4 menu-link dropdown">
+                        <li class="me-2 menu-link dropdown">
                             <a href="#" class="">
                                 {{ $link["name"]}} &triangledown;
                                 {{-- Dropdown menu --}}
@@ -23,16 +23,17 @@
                             </a>
                         </li>
                     @else
-                        <li class="ms-4 menu-link">
+                        <li class="me-4 menu-link">
                             <a href="">{{ $link["name"] }}</a>
                         </li>
                     @endif
                 @endforeach
             </ul>
 
-            <form action="" class="d-flex align-items-center">
-                <input type="search" class="search-bar" placeholder="Search">
-            </form>
         </nav>
+
+        <form action="" class="d-flex align-items-center justify-content-end">
+            <input type="search" class="search-bar" placeholder="Search">
+        </form>
     </div>
 </header>
