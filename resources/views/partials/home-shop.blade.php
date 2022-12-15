@@ -1,7 +1,7 @@
 <section>
     <section id="shop-nav">
         <nav>
-            <div class="small-container">
+            <div class="container-fluid">
                 <div class="row row-cols-5">
                     @foreach ($shopCards as $shopCard)    
                         <div class="col">
