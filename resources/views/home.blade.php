@@ -5,5 +5,7 @@
 @endsection
 
 @section('content')
-    <h1>Pagina iniziale</h1>
+    @include('partials.home-comics-section')
+
+   
 @endsection

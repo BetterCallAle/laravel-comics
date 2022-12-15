@@ -1,0 +1,19 @@
+.ms_card{
+    height: 100%;
+    &:hover .ms_card-img img{
+        scale: 1.1
+    }
+    .ms_card-img{
+        height: 200px;
+        overflow: hidden;
+        margin-bottom: .8rem;
+        img{
+            scale: 1;
+            transition: all 300ms linear;
+        }
+    }
+    .ms_card-txt{
+        font-size: .7rem;
+        text-transform: uppercase;
+    }
+}

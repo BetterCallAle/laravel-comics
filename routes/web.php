@@ -58,5 +58,33 @@ $navbarLinks = [
 
 Route::get('/', function () use ($navbarLinks) {
     $navbar = $navbarLinks;
-    return view('home', compact("navbar"));
+    $comics = config('comics');
+    $shopCard = [
+        [
+            "imgName" => "buy-comics-digital-comics.png",
+            "imgAlt" => "Tablet con all'interno logo DC",
+            "cardText" => "Digital Comics",
+        ],
+        [
+            "imgName" => "buy-comics-merchandise.png",
+            "imgAlt" => "T-shirt con logo DC",
+            "cardText" => "DC Merchandise",
+        ],
+        [
+            "imgName" => "buy-comics-subscriptions.png",
+            "imgAlt" => "Carte con simbolo di Flash",
+            "cardText" => "Subscription",
+        ],
+        [
+            "imgName" => "buy-comics-shop-locator.png",
+            "imgAlt" => "Puntatore mappa",
+            "cardText" => "Comic Shop Locator",
+        ],
+        [
+            "imgName" => "buy-dc-power-visa.svg",
+            "imgAlt" => "Carta di credito con simbolo di Flash",
+            "cardText" => "DC Power Visa",
+        ]
+    ];
+    return view('home', compact("navbar", "comics", "shopCard"));
 })->name("home");

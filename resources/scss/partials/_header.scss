@@ -1,7 +1,13 @@
 @use './variables' as *;
 
 header{
-    padding: 2rem 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
 
     .header-nav{
         font-weight: 700;
