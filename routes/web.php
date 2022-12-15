@@ -13,6 +13,50 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+$navbarLinks = [
+    [
+        "name"=> "Caracters",
+        "link"=> "caracters"
+    ],
+    [
+        "name"=> "Comics",
+        "link"=> "home"
+    ],
+    [
+        "name"=> "Movies",
+        "link"=> "movies"
+    ],
+    [
+        "name"=> "Tv",
+        "link"=> "tv"
+    ],
+    [
+        "name"=> "Games",
+        "link"=> "games"
+    ],
+    [
+        "name"=> "Collectibles",
+        "link"=> "collectibles"
+    ],
+    [
+        "name"=> "Videos",
+        "link"=> "videos"
+    ],
+    [
+        "name"=> "Fans",
+        "link"=> "fans"
+    ],
+    [
+        "name"=> "News",
+        "link"=> "news"
+    ],
+    [
+        "name"=> "Shop",
+        "link"=> "shop"
+    ],
+];
+
+Route::get('/', function () use ($navbarLinks) {
+    $navbar = $navbarLinks;
+    return view('home', compact("navbar"));
 })->name("home");

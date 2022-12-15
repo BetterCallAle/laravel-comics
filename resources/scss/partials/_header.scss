@@ -1,0 +1,49 @@
+@use './variables' as *;
+
+header{
+    padding: 2rem 0;
+
+    .header-nav{
+        font-weight: 700;
+        text-transform: uppercase;
+        
+        ul{
+            .dropdown{
+                position: relative;
+                
+                .hidden-menu{
+                    position: absolute;
+                    left: 0;
+                    top: 35%;
+                    width: 300px;
+                    background-color: white;
+                }
+
+                &:hover .hidden-menu{
+                    display: block !important;
+                }
+            }
+        }
+
+        form{
+            width: 10%;
+            .search-bar{
+                width: 100%;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 2px solid $main-blue;
+                
+                &::placeholder{
+                    font-weight: 500;
+                    color: black;
+                    text-align: right;
+                }
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
+}
