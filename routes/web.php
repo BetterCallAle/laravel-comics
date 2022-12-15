@@ -59,7 +59,7 @@ $navbarLinks = [
 Route::get('/', function () use ($navbarLinks) {
     $navbar = $navbarLinks;
     $comics = config('comics');
-    $shopCard = [
+    $shopCards = [
         [
             "imgName" => "buy-comics-digital-comics.png",
             "imgAlt" => "Tablet con all'interno logo DC",
@@ -86,5 +86,5 @@ Route::get('/', function () use ($navbarLinks) {
             "cardText" => "DC Power Visa",
         ]
     ];
-    return view('home', compact("navbar", "comics", "shopCard"));
+    return view('home', compact("navbar", "comics", "shopCards"));
 })->name("home");

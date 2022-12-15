@@ -7,5 +7,6 @@
 @section('content')
     @include('partials.home-comics-section')
 
+    @include('partials.home-shop')
    
 @endsection

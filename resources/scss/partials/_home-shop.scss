@@ -1,0 +1,43 @@
+@use './variables' as * ;
+
+#shop-nav{
+    background-color: $main-blue;
+    padding: 2rem 0;
+    .row{
+        .item{
+            margin-left: 1rem;
+            padding: .5rem;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            transition: all 125ms linear;
+            
+            &:hover{
+                    border: 1px solid white;
+                    background-color: lighten($main-blue, 10%);
+                }
+            a{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                
+                .item-img{
+                    width: 25%;
+                    img{
+                        width: 100%;
+                        min-width: 40px;
+                    }
+                }
+                .item-txt{
+                    margin-left: 1rem;
+                    font-size: .6rem;
+                    color: white;
+                    h2{
+                        font-weight: 100;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
