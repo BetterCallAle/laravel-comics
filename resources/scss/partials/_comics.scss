@@ -1,0 +1,28 @@
+#comics{
+    .ms_card{
+        height: 33vh;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid black;
+        .ms_card-thumb{
+            width: 20%;
+            height: 100%;
+        }
+    }
+
+    .ms_card-info{
+        width: 80%;
+        height: 100%;
+        overflow-y: auto;
+        ul{
+            li{
+                margin-bottom: .5rem;
+
+                .nested-list{
+                    margin-top: .5rem;
+                    padding: 0 1rem;
+                }
+            }
+        }
+
+    }
+}

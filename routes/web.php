@@ -88,3 +88,11 @@ Route::get('/', function () use ($navbarLinks) {
     ];
     return view('home', compact("navbar", "comics", "shopCards"));
 })->name("home");
+
+Route::get("/comics", function() use($navbarLinks){
+
+    $navbar = $navbarLinks;
+    $comics = config('comics');
+
+    return view('comics', compact("navbar", "comics"));
+})->name("comics");

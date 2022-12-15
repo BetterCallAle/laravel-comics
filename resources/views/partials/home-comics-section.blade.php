@@ -17,7 +17,7 @@
             </div>
 
             <div class="comics-bottom">
-                <button class="btn-load">LOAD MORE</button>
+                <a href="{{ route('comics') }}" class="btn-load">LOAD MORE</a>
             </div>
         </div>
     </div>
